@@ -1,3 +1,6 @@
+/* import fonts from fonts.css file */
+@import url("https://fonts.googleapis.com/css?family=Koulen:200i,400&display=swap");
+
 /* Design tokens */
 :root {
   --paper: hsla(251, 28%, 88%, 0.99);
@@ -6,7 +9,125 @@
   --font: "Raleway", system-ui, sans-serif;
   --gap: 20px;
   --container: clamp(280px, calc(100vw - calc(var(--gap) * 2)), 1180px);
+  /* new  */
+  --primary-color: #4458dc;
+  --primary-color2: #854fee;
+  --title-color: #141313;
+  --text-color: #777777;
+  --border-color: #201f1f17;
+  --gradient-color: linear-gradient(90deg, #4458dc 0%, #854fee 100%);
+  --shadow-color: 0px 10px 30px rgba(118, 85, 225, 0.3);
+  --box-shadow: 0px 10px 30px rgba(57, 56, 61, 0.205);
+
+  /* font family variables. */
+  --roboto: "Roboto", cursive;
 }
+
+/* dark mode colors class*/
+.dark-mode {
+  background: black;
+  color: white;
+}
+
+/*    hamburger  */
+#menuToggle {
+  display: block;
+  right: 25px;
+  mix-blend-mode: difference;
+}
+
+/*
+   * Just a quick hamburger
+   */
+
+#menuToggle span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+
+  background: white;
+}
+
+/*container that holds the switch*/
+.wrapper-color-switch {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 1em;
+}
+
+/*label for switch that is interactive*/
+.color-switch {
+  width: 4em;
+  height: 2em;
+  border-radius: 10em;
+  background: var(--text-color);
+  position: absolute;
+  cursor: pointer;
+}
+
+/*circle toggle that animates backward and forward*/
+.color-switch-toggle {
+  width: 1.6em;
+  height: 1.6em;
+  background: rgb(0, 0, 0);
+  position: absolute;
+  border-radius: 10em;
+  top: 0.2em;
+  left: 0.2em;
+  cursor: pointer;
+  transition: all 250ms ease-in-out;
+}
+
+/*animate circle toggle if switch is on*/
+#input-color-switch:checked ~ label .color-switch-toggle {
+  transform: translatex(2em);
+}
+
+/*hide input*/
+#input-color-switch {
+  display: none;
+}
+
+/* start navigation */
+
+.header_area .main-menu .navbar .navbar-brand {
+  padding: 0 2rem 0 5rem;
+}
+
+.header_area .main-menu .navbar {
+  padding: 1rem 20rem;
+}
+
+.header_area .main-menu .nav-item .nav-link {
+  font: normal 500 15px/2px var(--roboto);
+  text-transform: uppercase;
+  padding: 1.7rem;
+  color: var(--text-color);
+}
+
+.header_area .main-menu .navbar-nav .active a {
+  background: var(--gradient-color);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.header_area .main-menu .navbar-nav a:hover {
+  background: var(--gradient-color);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* end navigation */
+
 /* General Styles */
 html,
 body {
@@ -54,4 +175,15 @@ nav ul {
 section p {
   line-height: 1.5;
   max-width: 55ch;
+}
+
+/*  footer     */
+footer.footer-area .social a > i {
+  font-size: 22px;
+  padding: 2rem;
+  color: var(--border-color);
+}
+
+footer.footer-area .social a:hover > i {
+  color: var(--primary-color);
 }
