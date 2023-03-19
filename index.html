@@ -1,114 +1,80 @@
 <!DOCTYPE html>
-<html lang="en-gb">
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>My Portfolio</title>
-    <meta name="description" content="The technical portfolio of trainee name" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
+    <!--   Google fonts link -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet" />
+
+    <!--   favicon link  ---- -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <!-- suppress FOUC-->
-    <style>
-      html {
-        animation: fade-in 1s;
-      }
-      @keyframes fade-in {
-        0% {
-          opacity: 0;
-        }
-        100% {
-          opacity: 1;
-        }
-      }
-    </style>
-    <link rel="stylesheet" href="style.css" media="print" onload="this.media='all'" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;800&display=swap" rel="stylesheet" />
-  </head>
-  <body id="body">
-    <header>
-      <h1>ali nasir</h1>
-      <div class="collapse navbar-collapse justify-content-center" aria-label="Main Site Links" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="#About">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#Services">services</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#Stack"><i class="fa fa-stack-exchange fa-2x"></i></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#Portfolio">portfolio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#Music"><i class="fa fa-music fa-2x"></i></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#Contact">contact</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://github.com/ali-nasir-ali"><i class="fa fa-github fa-2x"></i></a>
-          </li>
 
-          <!--     light/dark mode container -->
-          <li class="nav-item">
-            <div class="wrapper-color-switch nav-link">
-              <input type="checkbox" id="input-color-switch" />
-              <label for="input-color-switch" class="color-switch">
-                <div class="color-switch-toggle"></div>
-              </label>
-            </div>
-          </li>
-        </ul>
+    <!--   local CSS link  ---- -->
+    <link rel="stylesheet" href="css/main.css" />
+
+    <title>nasir</title>
+
+    <!--   local header and footer JavaScript link  ---- -->
+    <script src="main.js" type="text/javascript" defer></script>
+  </head>
+
+  <body>
+    <!--  ======================= START of Page Area =============================  -->
+    <!--  =======================  START art of NAV BAR =============================  -->
+    <header-component></header-component>
+
+    <!--  =======================  END of NAV BAR =============================  -->
+
+    <!--  =======================  START of Main =============================  -->
+    <main class="scroll_container">
+      <div class="hero_card_text scroll_container_child">
+        <div>
+          <h1 class="hero_card_text_h1">Hello</h1>
+          <h2 class="hero_card_text_h2">Here's who i am & what i do</h2>
+        </div>
+        <div>
+          <p class="hero_card_text_p">
+            I'm a paragraph. Click here to add your own text and edit me. It's easy. Just click "Edit Text" or double-click me to add you own content and make changes to the font.
+          </p>
+          <p class="hero_card_text_p">I'm a great place for you to tell a story and let your users know a little more about you.</p>
+        </div>
       </div>
-    </header>
-    <main tabindex="0">
-      <section id="about">
-        <header><h2>About Me</h2></header>
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla nisi excepturi quidem, eum rem doloribus quam aspernatur hic enim eligendi commodi minima ullam
-          necessitatibus, cumque blanditiis, nihil magni amet consectetur?
-        </p>
-      </section>
-      <section id="projects">
-        <header><h2>Projects Showcase</h2></header>
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla nisi excepturi quidem, eum rem doloribus quam aspernatur hic enim eligendi commodi minima ullam
-          necessitatibus, cumque blanditiis, nihil magni amet consectetur?
-        </p>
-      </section>
-      <section id="contact">
-        <header><h2>Contact me</h2></header>
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla nisi excepturi quidem, eum rem doloribus quam aspernatur hic enim eligendi commodi minima ullam
-          necessitatibus, cumque blanditiis, nihil magni amet consectetur?
-        </p>
-      </section>
+      <div class="hero_card scroll_container_child">
+        <div class="hero_card_name_image">
+          <img
+            class="hero_card_image"
+            src="https://media.licdn.com/dms/image/D5635AQElXscXXCnmEA/profile-framedphoto-shrink_200_200/0/1659870835145?e=1679835600&v=beta&t=ZrQi_MgWilzAybBMrlO7pJEEjWi3Q0FgvfqAofIpWyM"
+            alt="nasir picture smiling"
+          />
+          <h2>Nasir</h2>
+          <h2>Ali</h2>
+          <div class="hero_card_line"></div>
+        </div>
+        <div class="hero_button">
+          <btn class="hero_button_resume"> <a href="resume.html">RESUME</a></btn>
+          <btn class="hero_button_projects"><a href="projects.html">PROJECTS</a></btn>
+        </div>
+        <div class="hero_social scroll_container_child">
+          <!-- social links -->
+
+          <a class="hero_social_link" href="https://join.slack.com/t/newworkspace-mhh2606/shared_invite/zt-1a4xeyiau-am5~499oOPi2QCtrHhSaLQ"><i class="fa fa-slack"></i></a>
+          <a class="hero_social_link" href="https://twitter.com/a_nasir_ali"><i class="fa fa-twitter"></i></a>
+          <a class="hero_social_link" href="mailto:ali.nasir.turii@outlook.com"><i class="fa fa-envelope"></i></a>
+          <a class="hero_social_link" href="https://github.com/ali-nasir-ali"><i class="fa fa-github fa-1x"></i></a>
+        </div>
+        <div class="hero_card_bottom_gap"></div>
+      </div>
     </main>
-    <footer>
-      <div class="social text-center">
-        <h5 class="text-uppercase">Follow me</h5>
-        <!--  <a href="#"><i class="fa fa-facebook"></i></a>   -->
-        <!--  <a href="#"><i class="fa fa-instagram"></i></a>  -->
-        <a href="https://join.slack.com/t/newworkspace-mhh2606/shared_invite/zt-1a4xeyiau-am5~499oOPi2QCtrHhSaLQ"><i class="fa fa-slack"></i></a>
-        <a href="mailto:a.nasirali@outlook.com"><i class="fa fa-envelope"></i></a>
-        <a href="https://twitter.com/a_nasir_ali"><i class="fa fa-twitter"></i></a>
-        <a href="https://github.com/ali-nasir-ali"><i class="fa fa-github fa-2x"></i></a>
-      </div>
-      <div class="copyrights text-center">
-        <p class="para">
-          Copyright &copy;
-          <script>
-            document.write(new Date().getFullYear());
-          </script>
-          MPL v.2.0 | programmed by
-          <a href="https://github.com/ali-nasir-ali"><span style="color: var(--primary-color)">nasir</span></a>
-        </p>
-      </div>
-    </footer>
+    <!--  =======================  END of Main =============================  -->
+
+    <!--  =======================  START of Footer =============================  -->
+
+    <footer-component></footer-component>
+
+    <!--  =======================  END of Footer =============================  -->
+    <!--  ======================= END of Page Area =============================  -->
   </body>
 </html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!--   Google fonts link -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Questrial"
+      rel="stylesheet"
+    />
+
+    <!--   favicon link  ---- -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <!--   local CSS link  ---- -->
+    <link rel="stylesheet" href="css/main.css" />
+
+    <title>nasir</title>
+    <!--   local header and footer JavaScript link  ---- -->
+    <script src="main.js" type="text/javascript" defer></script>
+  </head>
+
+  <body>
+    <!--  ======================= START of Page Area =============================  -->
+    <!--  =======================  START art of NAV BAR =============================  -->
+
+    <header-component></header-component>
+
+    <!--  =======================  END of NAV BAR =============================  -->
+
+    <!--  =======================  START of Main =============================  -->
+    <main class="resume_main">
+      <div class="project_main_head scroll_container_child">
+        <div class="project_main_logo_box"></div>
+        <h1 class="project_main_h1">Let's talk</h1>
+      </div>
+
+      <div class="project_main_01">
+        <fieldset>
+          <div>
+            <div class="form_column">
+              <label for="firstname">First name*</label>
+              <input class="input_form"
+                id="firstname"
+                type="text"
+                required
+                size="20"
+                name="firstname"
+              /><br />
+            </div>
+            <div class="form_column">
+              <label for="lastname">Last name*</label>
+              <input class="input_form"
+                id="lastname"
+                type="text"
+                required
+                size="20"
+                name="lastname"
+              />
+            </div>
+          </div>
+          <div class="form_column">
+            <label for="address">Email*</label>
+            <input class="input_form"
+              id="address"
+              type="text"
+              required
+              size="20"
+              name="email"
+            /><br />
+           </div>
+          <div class="form_column">
+            <label for="address2">Subject</label>
+            <input class="input_form"
+              id="address2"
+              type="text"
+              required
+              size="20"
+              name="address2"
+            /><br />
+           </div>
+           <div class="form_column">
+            <label for="Message">Message</label>
+            <input class="input_form"
+              id="Message"
+              type="text"
+              required
+              size="20"
+              name="Message"
+            /><br />
+          </textarea>
+           </div>
+          
+        </fieldset>
+        <div class="hero_button contact_send_but">
+          <btn class="hero_button_resume">SEND</btn>
+        </div>
+      </div>
+    </main>
+    <!--  =======================  END of Main =============================  -->
+
+    <!--  =======================  START of Footer =============================  -->
+
+    <footer-component></footer-component>
+    <!--#include file="assets/header.html" -->
+    <!--  =======================  END of Footer =============================  -->
+    <!--  ======================= END of Page Area =============================  -->
+  </body>
+</html>

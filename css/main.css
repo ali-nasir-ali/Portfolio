@@ -1,0 +1,543 @@
+/* Add your CSS here */
+
+/* Dont' forget to link this file to your HTML in the <head> */
+
+/**/
+/* basicc colours */
+:root {
+  --header-white: #fff;
+  --main-beige: #e6dacd;
+  --second-beige: #f4ece6;
+  --buttons-blue: #0150fd;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+}
+
+.scroll_container {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+}
+.scroll_container_child {
+  scroll-snap-align: start;
+}
+/*  */
+
+/*  */
+/* =========   whole website   ==========  */
+/*  nav and logo grid   */
+header {
+  background-color: var(--header-white);
+  margin: 1rem 1rem 0.4rem 1rem;
+  padding: 0.3rem;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: auto;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  grid-template-areas:
+    "logo name name name .  bar"
+    "manag  manag  manag  .  .  bar"
+    "manag  manag  manag  .  .  .";
+}
+/*             Navigation */
+
+/*             name and logo --- logo area  */
+
+.logo_box {
+  grid-area: logo;
+  margin-top: 0.35rem;
+  height: 1rem;
+  width: 1rem;
+  background-color: var(--buttons-blue);
+}
+.name_maya {
+  grid-area: name;
+  font-weight: 800;
+  font-size: 0.75rem;
+  padding-top: 0.3rem;
+  margin-left: -30px;
+}
+.name_manager {
+  grid-area: manag;
+  margin-top: 6px;
+  font-size: 0.8rem;
+  font-weight: 40;
+}
+.name_box > p {
+  display: none;
+}
+/*             hamburgar */
+.ham_bar_box {
+  margin-top: 10px;
+  grid-area: bar;
+  width: 1.8rem;
+  height: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.ham_bar_one {
+  border-radius: 1.5px;
+  width: 50%;
+  height: 3px;
+  background-color: var(--buttons-blue);
+  border-radius: 1.5px;
+}
+
+.ham_bar_two {
+  border-radius: 1.5px;
+  width: 100%;
+  height: 3px;
+  background-color: var(--buttons-blue);
+  border-radius: 1.5px;
+}
+
+.ham_bar_three {
+  border-radius: 1.5px;
+  width: 50%;
+  height: 3px;
+  background-color: var(--buttons-blue);
+  border-radius: 1.5px;
+  align-self: flex-end;
+}
+
+/* */
+.navbar {
+  position: absolute;
+  /* a higher z-index put nav bar above hambur */
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  /* basic menu styling*/
+  list-style: none;
+  background: var(--main-beige);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  column-gap: 3rem;
+  padding-top: 8rem;
+  /* animate slide up/down */
+  transform: translateY(-100%);
+  transition: transform 0.2s ease;
+}
+.nav_bar_close {
+  margin-right: -3rem;
+}
+/* :target is called when its anchor id #nav bar is called by clicking on the hambur which has href="#nav bar" */
+
+.navbar:target {
+  /* show nav bar */
+  transform: translateY(0);
+}
+li a {
+  display: block;
+  font-family: "Open Sans", sans-serif;
+  color: black;
+  font-weight: bold;
+  font-size: 1.2rem;
+  /* remove default underline and add our own with padding and border bottom */
+  text-decoration: none;
+  padding-top: 3rem;
+}
+
+li a:hover,
+li a:focus {
+  /* show border bottom */
+  color: var(--buttons-blue);
+}
+
+/* */
+
+/**/
+/* main grid layout for whole index page */
+
+/**/
+/*                  main        */
+.hero_card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--second-beige);
+
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  width: 90%;
+  align-self: end;
+}
+
+.hero_card_name_image {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.hero_card_image {
+  border-radius: 50%;
+  height: 7rem;
+}
+
+.hero_card_line {
+  width: 5rem;
+  height: 0.1rem;
+  background-color: var(--buttons-blue);
+  border-radius: 1.5px;
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.hero_button {
+  display: flex;
+  justify-content: center;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+.hero_button_resume {
+  color: white;
+  background-color: var(--buttons-blue);
+  border-radius: 100px 100px 100px 100px;
+  padding: 0.5rem 2rem 0.5rem 2rem;
+  margin: 0.3rem;
+  font-weight: 800;
+  font-size: 1rem;
+}
+.hero_button_resume:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid var(--buttons-blue);
+}
+.hero_button_projects {
+  background-color: var(--second-beige);
+  border-radius: 100px 100px 100px 100px;
+  border: 1px solid black;
+  padding: 0.5rem 2rem 0.5rem 2rem;
+  margin: 0.3rem;
+  font-weight: 800;
+  font-size: 1rem;
+}
+.hero_card_bottom_gap {
+  height: 10px;
+}
+.hero_button_projects:hover {
+  background-color: var(--buttons-blue);
+  color: white;
+}
+.hero_social {
+  display: flex;
+  justify-content: center;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  margin-top: 1rem;
+  background-color: white;
+  align-items: center;
+}
+
+.hero_social_link {
+  color: black;
+  height: 1.2rem;
+  width: 1.2rem;
+  padding-inline: 1rem;
+}
+
+.hero_card_text {
+  position: absolute;
+  margin-top: 9rem;
+  padding: 0 1.5rem 2rem 1.5rem;
+  background-color: var(--main-beige);
+}
+
+.hero_card_text_p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  padding-bottom: 1.2rem;
+}
+.hero_card_text_h1 {
+  padding-top: 15rem;
+  padding-bottom: 20px;
+  font-weight: bold;
+}
+.hero_card_text_h2 {
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+/*  */
+
+/*  */
+
+/* =========                   PROJECTS PAGE                       ==========  */
+.project_main {
+  background-color: var(--main-beige);
+  margin-bottom: -22rem;
+}
+.project_main_head {
+  font-size: 1rem;
+  align-content: center;
+  padding-top: 4rem;
+  padding-bottom: 1rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.project_main_h1 {
+  font-size: 2rem;
+  padding-top: 0;
+}
+.project_main_logo_box {
+  margin-right: 0.5rem;
+  height: 1.5rem;
+  width: 1.5rem;
+  background-color: var(--buttons-blue);
+  display: flex;
+}
+.project_main_p {
+  margin-inline: 1rem;
+  font-size: 0.9rem;
+  padding-bottom: 0.75rem;
+  line-height: 1.4rem;
+  text-align: center;
+}
+/*                       card */
+.project_main_01 {
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  background-color: white;
+  padding-top: 1rem;
+  margin-bottom: 1rem;
+}
+.project_main_01_head {
+  height: 100%;
+}
+.project_main_01_head_div {
+  display: grid;
+  padding-bottom: 0.9rem;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas:
+    "b p p p p p p"
+    "b r r r r r r";
+}
+.project_main_01_head_div_blue {
+  grid-area: b;
+  margin-right: 0.3rem;
+  height: 2rem;
+  width: 0.5rem;
+  background-color: var(--buttons-blue);
+}
+.project_main_01_head_div_name {
+  grid-area: p;
+  font: bold;
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: var(--buttons-blue);
+}
+.project_main_01_head_div_title {
+  grid-area: r;
+  font: bold;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding-top: 0.6rem;
+}
+.project_main_01_head_p {
+  margin-inline: 1rem;
+  font-size: 0.9rem;
+  padding-bottom: 0.75rem;
+  padding-left: 0.8rem;
+  line-height: 1.4rem;
+}
+.project_main_image_img {
+  object-fit: cover;
+  width: 100%;
+  bottom: 0px;
+}
+/*  */
+/*  */
+/* =========                      RESUME PAGE              ==========  */
+/*  resume   */
+
+.resume_main {
+  background-color: var(--main-beige);
+  padding-bottom: 1rem;
+  margin-bottom: -22rem;
+}
+.resume_main_exp {
+  display: flex;
+  padding: 0.5rem 0 0.5rem 0;
+  justify-content: space-around;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.resume_main_exp h2 {
+  padding-top: 9px;
+}
+.resume_main_01_head_div_title {
+  grid-area: r;
+  font-size: 1rem;
+  padding-top: 0.6rem;
+}
+.project_main_01_head_p_com {
+  margin-bottom: 1rem;
+}
+.resume_main_edu {
+  display: flex;
+  padding: 0.5rem 0 0.5rem 0;
+  margin-top: 1rem;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+}
+.resume_main_skill {
+  padding-left: 1.4rem;
+}
+.resume_main_title {
+  font-size: 0.7rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.resume_main_body_text {
+  font-size: 1rem;
+}
+.resume_main_logo_box {
+  margin-right: 0.5rem;
+  height: 1rem;
+  width: 1rem;
+  background-color: var(--buttons-blue);
+  display: flex;
+}
+.resume_main_body_line {
+  display: flex;
+  padding-top: 1.5rem;
+}
+.resume_bottom_space {
+  padding-bottom: 2rem;
+}
+/*  */
+/*  */
+/*  */
+/* =========                      contact form              ==========  */
+/*  contact   */
+fieldset {
+  border: none;
+  background-color: white;
+  display: grid;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.form_column {
+  display: flex;
+  flex-direction: column;
+  padding: 0.25rem;
+  padding-top: 1rem;
+}
+input {
+  outline: 0;
+  border-width: 0 0 2px;
+  border-color: black;
+}
+input:focus,
+input:hover {
+  border-width: 0 0 3px;
+  border-color: var(--buttons-blue);
+}
+
+.contact_send_but {
+  padding-bottom: 3rem;
+}
+.input_form {
+  padding-top: 2rem;
+}
+/*  */
+/*  */
+/*  */
+/* =========                      footer  in main js              ==========  */
+/*  footer   */
+footer {
+  margin-top: 25rem;
+  background-color: white;
+}
+.footer_contact {
+  display: flex;
+  padding: 0.5rem 0 0.5rem 0;
+  justify-content: space-around;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-left: -3rem;
+}
+
+.footer_contact p {
+  font-size: 0.8rem;
+  padding-top: 1rem;
+}
+
+.footer_social > h3 {
+  padding-bottom: 1rem;
+}
+.footer_social {
+  padding-left: 1rem;
+}
+.footer_social > a {
+  margin-left: -1rem;
+}
+.footer_copy_right {
+  font-size: 0.7rem;
+  padding-left: 1rem;
+  margin-bottom: 3rem;
+  margin-top: 1rem;
+}
+.footer_copy_right > p {
+  font-size: small;
+}
+.footer_wix_link {
+  text-decoration: underline;
+}
+.footer_wix_link:hover {
+  background-color: var(--buttons-blue);
+  color: white;
+}
+/**/
+/**/
+/**/
+/**/
+/*                     MEDIA            */
+@media only screen and (min-width: 1000px) {
+  .ham_bar_box {
+    display: none;
+  }
+
+  header {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .name_box > h3 {
+    margin-right: auto;
+    margin-left: 0.5rem;
+  }
+
+  .name_box > p {
+    display: block;
+    margin-left: 1rem;
+  }
+}
