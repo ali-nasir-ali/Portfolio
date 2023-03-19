@@ -1,6 +1,10 @@
 # Portfolio
 
-Your starting portfolio, to iterate on.
+Your starting portfolio.
+
+# link to netlify
+
+https://ali-nasir.netlify.app/
 
 ## Learning Objectives
 
